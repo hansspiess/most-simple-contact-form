@@ -1,0 +1,88 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Most simple contact form\n"
+"POT-Creation-Date: 2019-01-14 08:53+0100\n"
+"PO-Revision-Date: 2019-01-15 09:22+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: most-simple-contact-form.php:5
+msgid "Generates a simple contact form via shortcode."
+msgstr "Generates a simple contact form via shortcode."
+
+#: most-simple-contact-form.php:192
+msgid "Name"
+msgstr "Ім'я"
+
+#: most-simple-contact-form.php:198
+msgid "Your name"
+msgstr "Ваше iм'я"
+
+#: most-simple-contact-form.php:201
+msgid "Homepage"
+msgstr "Bеб-сайт"
+
+#: most-simple-contact-form.php:207
+msgid "Your homepage"
+msgstr "Ваш веб-сайт"
+
+#: most-simple-contact-form.php:210
+msgid "Email address"
+msgstr "E-mail"
+
+#: most-simple-contact-form.php:216
+msgid "Your email address"
+msgstr "Ваш e-mail"
+
+#: most-simple-contact-form.php:219
+msgid "Message"
+msgstr "Повідомлення"
+
+#: most-simple-contact-form.php:224
+msgid "Your message"
+msgstr "Ваш повідомлення"
+
+#: most-simple-contact-form.php:230
+#, php-format
+msgid ""
+"By submitting the form, you consent to the processing of your data in order "
+"to process the request. Further information in the <a href=\"%s/"
+"datenschutzerklaerung/\">privacy policy</a>."
+msgstr ""
+"Надсилаючи форму, ви погоджуєтесь, що ваші дані будуть оброблені для обробки "
+"запиту. Подальша інформація в <a href=\"%s/datenschutzerklaerung/\">політиці "
+"конфіденційності</a>."
+
+#: most-simple-contact-form.php:235
+msgid "Send message"
+msgstr "Підписатися"
+
+#: most-simple-contact-form.php:279
+msgid "Please fill out all fields."
+msgstr "Будь ласка, заповніть всі поля."
+
+#: most-simple-contact-form.php:280
+msgid "Please check your email address."
+msgstr "Перевірте адресу електронної пошти."
+
+#: most-simple-contact-form.php:281
+msgid "Please dont call this by script."
+msgstr "Будь ласка, не викликайте скрипт."
+
+#: most-simple-contact-form.php:282
+msgid "The message could not be sent."
+msgstr "Не вдалося надіслати повідомлення."
+
+#: most-simple-contact-form.php:283
+msgid "Thanks! The message has been sended."
+msgstr "Дякую! Повідомлення надіслано."

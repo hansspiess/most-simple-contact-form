@@ -1,0 +1,88 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Most simple contact form\n"
+"POT-Creation-Date: 2019-01-14 09:02+0100\n"
+"PO-Revision-Date: 2019-01-15 09:21+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: most-simple-contact-form.php:5
+msgid "Generates a simple contact form via shortcode."
+msgstr "Zeigt ein sehr einfaches Kontaktformular per Shortcode."
+
+#: most-simple-contact-form.php:193
+msgid "Name"
+msgstr "Name"
+
+#: most-simple-contact-form.php:199
+msgid "Your name"
+msgstr "Ihr Name"
+
+#: most-simple-contact-form.php:202
+msgid "Homepage"
+msgstr "Webseite"
+
+#: most-simple-contact-form.php:208
+msgid "Your homepage"
+msgstr "Ihre Webseite"
+
+#: most-simple-contact-form.php:211
+msgid "Email address"
+msgstr "E-Mail"
+
+#: most-simple-contact-form.php:217
+msgid "Your email address"
+msgstr "Ihre E-Mail-Adresse"
+
+#: most-simple-contact-form.php:220
+msgid "Message"
+msgstr "Nachricht"
+
+#: most-simple-contact-form.php:225
+msgid "Your message"
+msgstr "Ihre Nachricht"
+
+#: most-simple-contact-form.php:231
+#, php-format
+msgid ""
+"By submitting the form, you consent to the processing of your data in order "
+"to process the request. Further information in the <a href=\"%s/"
+"datenschutzerklaerung/\">privacy policy</a>."
+msgstr ""
+"Mit dem Absenden des Formulars willigen Sie in die Verarbeitung Ihrer Daten "
+"zur Bearbeitung der Anfrage ein. Weitere Informationen in der <a href=\"%s/"
+"datenschutzerklaerung/\">Datenschutzerklärung</a>."
+
+#: most-simple-contact-form.php:236
+msgid "Send message"
+msgstr "Nachricht senden"
+
+#: most-simple-contact-form.php:280
+msgid "Please fill out all fields."
+msgstr "Bitte füllen Sie alle Felder aus."
+
+#: most-simple-contact-form.php:281
+msgid "Please check your email address."
+msgstr "Bitte überprüfen Sie Ihre Email-Adresse."
+
+#: most-simple-contact-form.php:282
+msgid "Please dont call this by script."
+msgstr "Bitte diese Seite nicht per Script aufrufen."
+
+#: most-simple-contact-form.php:283
+msgid "The message could not be sent."
+msgstr "Die Nachricht konnte nicht gesendet werden."
+
+#: most-simple-contact-form.php:284
+msgid "Thanks! The message has been sended."
+msgstr "Vielen Dank! Die Nachricht wurde gesendet."
