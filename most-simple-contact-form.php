@@ -35,7 +35,9 @@ if ( !class_exists( 'Most_Simple_Contact_Form' ) ) {
         const SHORTCODE_ATTS = [
             'mailto' => false, 
             'headermailto' => false, 
-            'headername' => false
+            'headername' => false,
+            'cssbutton' => 'btn btn-primary',
+            'cssalert' => 'alert alert-'
         ];
 
         /**
@@ -173,7 +175,7 @@ if ( !class_exists( 'Most_Simple_Contact_Form' ) ) {
         public function display_form( $atts = [], $content = null, $tag = '' ) {
             
             // Save atts from shortcode in transient to be used when processing form
-            $this->_set_transient_atts( $atts, $tag );
+            $atts = $this->_set_transient_atts( $atts, $tag );
 
             // Read transient that was saved when processing a form
             $saved = $this->_get_delete_transient_status();
@@ -182,7 +184,7 @@ if ( !class_exists( 'Most_Simple_Contact_Form' ) ) {
 
             ob_start();
 
-            echo $this->_get_messages_html( $status );
+            echo $this->_get_messages_html( $status, $atts );
             ?>
                 <form role="form" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
                     <input type="hidden" name="action" value="<?php echo MSCF__NAMESPACE; ?>">
@@ -224,7 +226,7 @@ if ( !class_exists( 'Most_Simple_Contact_Form' ) ) {
                             placeholder="<?php _e( 'Your message', MSCF__NAMESPACE); ?>"><?php echo esc_textarea($fields['message']); ?></textarea>
                     </div>
                     <div class="form-group">
-                        <small>
+                        <small class="form-small">
                             <?php
                                 $url = home_url();
                                 $link = sprintf( wp_kses( __( 'By submitting the form, you consent to the processing of your data in order to process the request. Further information in the <a href="%s/datenschutzerklaerung/">privacy policy</a>.', MSCF__NAMESPACE ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $url ) );
@@ -232,7 +234,7 @@ if ( !class_exists( 'Most_Simple_Contact_Form' ) ) {
                             ?>
                         </small>
                     </div>
-                    <button type="submit" class="btn btn-primary"><?php _e( 'Send message', MSCF__NAMESPACE); ?></button>
+                    <button type="submit" class="<?php echo $atts['cssbutton']; ?>"><?php _e( 'Send message', MSCF__NAMESPACE); ?></button>
                 </form>
 
             <?php
@@ -259,6 +261,8 @@ if ( !class_exists( 'Most_Simple_Contact_Form' ) ) {
                 $fields,
                 100
             );
+
+            return $fields;
         }
 
         /**
@@ -271,7 +275,7 @@ if ( !class_exists( 'Most_Simple_Contact_Form' ) ) {
             return $transient;
         }
 
-        private function _get_messages_html ( $messages ) {
+        private function _get_messages_html ( $messages, $atts ) {
             if (!count($messages)) {
                 return;
             }
@@ -284,7 +288,7 @@ if ( !class_exists( 'Most_Simple_Contact_Form' ) ) {
             ];
             foreach ($messages as $type => $type_messages) {
                 $m = implode( '<br>', $type_messages );
-                $o .= '<div class="alert alert-' . $type .'">' . $trans[$m]  . '</div>';
+                $o .= '<div class="' . $atts['cssalert'] . $type .'">' . $trans[$m]  . '</div>';
             }
             return $o;
         }
