@@ -303,7 +303,7 @@ if ( !class_exists( 'Most_Simple_Contact_Form' ) ) {
         /**
          * Compares timestamps
          */
-        private function _compare_times( $before_encrypted_timestamp, $range = 8 ) {
+        private function _compare_times( $before_encrypted_timestamp, $range = 4 ) {
             $before = $this->_simple_crypt( $before_encrypted_timestamp, 'd' );
             $now = current_time( 'timestamp' );
             return $now < $before + $range;
