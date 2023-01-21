@@ -253,7 +253,7 @@ if ( !class_exists( 'Most_Simple_Contact_Form' ) ) {
             $fields = shortcode_atts( self::SHORTCODE_ATTS, $atts, $tag );
 
             // Current url used as id for transient
-            $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER[HTTP_HOST] . $_SERVER[REQUEST_URI];
+            $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
             // Save atts of current page in transient
             set_transient( 
@@ -276,7 +276,7 @@ if ( !class_exists( 'Most_Simple_Contact_Form' ) ) {
         }
 
         private function _get_messages_html ( $messages, $atts ) {
-            if (!count($messages)) {
+            if (is_null($messages) || !count($messages)) {
                 return;
             }
             $trans = [
