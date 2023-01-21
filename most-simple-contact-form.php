@@ -13,11 +13,11 @@ Domain Path:  /languages
 */
 
 if ( !defined( 'MSCF_VERSION' ) ) {
-    define( MSCF__VERSION, '1.0.0' );
+    define( 'MSCF__VERSION', '1.0.0' );
 }
 
 if ( !defined( 'MSCF__NAMESPACE' ) ) {
-    define( MSCF__NAMESPACE, 'most-simple-contact-form' );
+    define( 'MSCF__NAMESPACE', 'most-simple-contact-form' );
 }
 
 if ( !class_exists( 'Most_Simple_Contact_Form' ) ) {
